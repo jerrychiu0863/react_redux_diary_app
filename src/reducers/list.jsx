@@ -1,4 +1,5 @@
 import C from '../constants/action-types';
+import _ from 'lodash';
 
 
 export default function list(state=[], action) {
@@ -11,7 +12,10 @@ export default function list(state=[], action) {
             const updatedList = state.filter(s => s.id !== action.payload);
             return updatedList
             
-       
+        case C.SORT_BY_DATE:
+            const sortedList = _.orderBy(state, [action.payload])
+            return sortedList;
+               
         default:
             return state;
     }

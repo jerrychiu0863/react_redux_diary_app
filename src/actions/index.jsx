@@ -38,3 +38,8 @@ export const dismiss = id => ({
     type: C.DISMISS,
     payload: id
 })
+
+export const sortByDate = date => ({
+    type: C.SORT_BY_DATE,
+    payload: date
+})

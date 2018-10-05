@@ -1,7 +1,7 @@
 import React from 'react';
 
 import store from '../store';
-import { dismiss } from '../actions';
+import { dismiss, sortByDate } from '../actions';
 import './List.css';
 
 const List = () => {
@@ -26,7 +26,9 @@ const List = () => {
 
     }
     
-
+    const sortList = () => {
+        store.dispatch(sortByDate('date'))
+    }
     
     return(
         <div className="Container">
@@ -35,7 +37,7 @@ const List = () => {
             list.map(l => 
              <div key={l.id} className="List">
                  <div className="List__header">
-                      <h1 style={{ fontSize: '20px'}} className="List__title">{l.date} <i className={getWeather(l.weather)}></i></h1>
+                      <h1 style={{ fontSize: '20px'}} className="List__title" onClick={sortList}>{l.date} <i className={getWeather(l.weather)}></i></h1>
                  </div>
                  <div className="List__content">
                      <p>{l.text}</p>

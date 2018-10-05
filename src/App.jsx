@@ -13,13 +13,7 @@ import './App.css';
 class App extends Component {
   constructor(props) {
       super(props);
-      
-      this.state = {
-          date: '',
-          color: '#000000',
-          isModelOpen: false
-      }
-      
+
   
   }    
 
@@ -31,8 +25,6 @@ class App extends Component {
   closeModel = () => {
       store.dispatch(setModel(false));
   }
-  
-  
     
   render() {
       const state = store.getState();
@@ -53,7 +45,7 @@ class App extends Component {
                 
                 <button onClick={this.closeModel} className="model__deleteBtn"><i className="fas fa-times-circle"></i></button> 
             </div>
-       
+
       </div>
     );
   }

@@ -17,7 +17,7 @@
 }
 
 .List__title {
-
+    cursor: pointer;
     padding: 10px;
     display: flex;
     justify-content: space-between;

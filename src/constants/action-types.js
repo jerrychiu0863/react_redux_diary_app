@@ -5,7 +5,8 @@ const constants = {
     SET_MODEL: "SET_MODEL",
     SET_TEXT: "SET_TEXT",
     SET_WEATHER: "SET_WEATHER",
-    DISMISS: "DISMISS"
+    DISMISS: "DISMISS",
+    SORT_BY_DATE: "SORT_BY_DATE"
 }
 
 export default constants;
