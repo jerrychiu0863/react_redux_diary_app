@@ -33,10 +33,28 @@ body {
 
 .model-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    width: 80%;
+    margin: 5% auto;
+    width: 400px;
     padding: 20px;
     border: 1px solid #888;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
 
+.model__deleteBtn {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.model__deleteBtn i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.model__deleteBtn i:hover {
+    color: #666;
+}
 

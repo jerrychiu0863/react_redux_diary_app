@@ -10,13 +10,14 @@
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    border-bottom: 1px solid #999;
+    
 }
 .List__header {
     width: 100%;
 }
 
 .List__title {
+
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -24,6 +25,25 @@
 }
 
 .List__content {
+    width: 100%;
     text-align: left;
     padding: 0 10px;
+}
+
+.List__content p {
+    width: 100%;
+    overflow: auto;
+    color: #666;
+}
+
+.List__content .List__deleteBtn {
+    margin-bottom: 10px;
+    font-size: 10px;
+    padding: 3px;
+    transform: translateX(330px);
+    opacity: 0;
+}
+
+.List__content:hover .List__deleteBtn {
+  opacity: 1;
 }

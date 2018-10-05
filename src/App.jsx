@@ -42,19 +42,16 @@ class App extends Component {
      
     return (
       <div className="App">
-           
-         
-           
+                      
            <Header />
            <List />
            
             <div className={isOpenModel ? "model active" : "model"}>
                 <div className="model-content">
-                     <Form date={date} color={color} text={text}/>
-                    
-                  
-                   <button onClick={this.closeModel}>X</button> 
-               </div>
+                    <Form date={date} color={color} text={text}/>
+                </div>
+                
+                <button onClick={this.closeModel} className="model__deleteBtn"><i className="fas fa-times-circle"></i></button> 
             </div>
        
       </div>

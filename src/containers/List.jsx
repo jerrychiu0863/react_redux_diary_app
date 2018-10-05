@@ -26,18 +26,22 @@ const List = () => {
 
     }
     
+
     
     return(
         <div className="Container">
-            {list.map(l => 
+            {list.length === 0 ? 
+                <p>Start your journey!</p> : 
+            list.map(l => 
              <div key={l.id} className="List">
                  <div className="List__header">
                       <h1 style={{ fontSize: '20px'}} className="List__title">{l.date} <i className={getWeather(l.weather)}></i></h1>
                  </div>
                  <div className="List__content">
                      <p>{l.text}</p>
+                      <button onClick={() => onDismiss(l.id)} className="btn btn-outline-dark List__deleteBtn">Delete</button>
                  </div>
-                <button onClick={() => onDismiss(l.id)}>X</button>
+               
              </div>)}
          </div>
     );

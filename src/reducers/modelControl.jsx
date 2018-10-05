@@ -5,6 +5,9 @@ export default function modelControl(state=false, action) {
         case C.SET_MODEL:
             return action.payload
             
+        case C.ADD_LIST:
+            return false;
+            
         default:
             return state;
     }

@@ -2,10 +2,7 @@ import C from '../constants/action-types';
 
 import { v4 } from 'uuid';
 
-export const setColor = (value) => ({
-    type: C.SET_COLOR,
-    payload: value
-})
+
 
 export const setDate = (value) => ({
     type: C.SET_DATE,
@@ -22,10 +19,9 @@ export const setWeather = (value) => ({
     payload: value
 })
 
-export const addList = (color, date, text, weather) => ({
+export const addList = ( date, text, weather) => ({
     type: C.ADD_LIST,
     payload: {
-        color,
         date,
         text,
         weather,
