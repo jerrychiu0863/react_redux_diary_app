@@ -1,0 +1,29 @@
+.Container {
+    width: 400px;
+    height: 80vh;
+    background-color: antiquewhite;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.List {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #999;
+}
+.List__header {
+    width: 100%;
+}
+
+.List__title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #feceab;
+}
+
+.List__content {
+    text-align: left;
+    padding: 0 10px;
+}
