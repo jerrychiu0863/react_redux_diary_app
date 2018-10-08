@@ -2,9 +2,9 @@
     width: 400px;
     background-color: #2a363b;
     margin: 0 auto;
-    padding: 5px;
+    padding: 5px 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 

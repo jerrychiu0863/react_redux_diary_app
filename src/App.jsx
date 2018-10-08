@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Form from './components/Form';
 import List from './containers/List';
 import Header from './containers/Header';
@@ -10,31 +10,20 @@ import './App.css';
 
 
 
-class App extends Component {
-  constructor(props) {
-      super(props);
 
-  
-  }    
-
+const App = () => {
     
-  openModel = () => {
-      store.dispatch(setModel(true));
-  }
-  
-  closeModel = () => {
-      store.dispatch(setModel(false));
-  }
-    
-  render() {
-      const state = store.getState();
-      const {color, date, isOpenModel, text} = state;
-      console.log(state);
+   const state = store.getState();
+   const {color, date, isOpenModel, text} = state;
+   console.log(localStorage);
    
-     
+   const closeModel = () => {
+      store.dispatch(setModel(false));
+   }
+       
     return (
       <div className="App">
-                      
+           
            <Header />
            <List />
            
@@ -43,12 +32,15 @@ class App extends Component {
                     <Form date={date} color={color} text={text}/>
                 </div>
                 
-                <button onClick={this.closeModel} className="model__deleteBtn"><i className="fas fa-times-circle"></i></button> 
+                <button onClick={closeModel} className="model__deleteBtn">
+                <i className="fas fa-times-circle"></i></button> 
             </div>
 
       </div>
     );
-  }
 }
+
+    
+  
 
 export default App;

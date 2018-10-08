@@ -13,7 +13,6 @@ const Header = () => {
     return(
         <div className="Header">
             <span className="Header__title">Diary</span>
-            <input type="text" />
             <button type="button" className="btn btn-outline-light" onClick={openModel}><i className="fas fa-pen"></i></button>
 
         </div>

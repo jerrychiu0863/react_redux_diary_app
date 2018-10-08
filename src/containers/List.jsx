@@ -33,7 +33,7 @@ const List = () => {
     return(
         <div className="Container">
             {list.length === 0 ? 
-                <p>Start your journey!</p> : 
+                <img src="https://d29fhpw069ctt2.cloudfront.net/photo/7504/preview/a5481a8e-69c7-4a9a-8bf8-88fed750bfd9_1280x1280.jpg" alt="123" /> : 
             list.map(l => 
              <div key={l.id} className="List">
                  <div className="List__header">

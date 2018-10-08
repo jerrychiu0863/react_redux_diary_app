@@ -5,9 +5,8 @@ import './Form.css';
 import { setDate, addList, setText, setWeather } from '../actions';
 import store from '../store';
 
-const Form = ({date, color, text}) => {
-    
-    
+const Form = ({ date, color, text }) => {
+        
     let _date, _text, _weather;
         
     const handleDate = e => {

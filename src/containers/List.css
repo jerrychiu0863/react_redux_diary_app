@@ -6,6 +6,10 @@
     overflow-y: scroll;
 }
 
+img {
+    width: 400px;
+}
+
 .List {
     text-align: center;
     width: 100%;
