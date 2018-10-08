@@ -10,12 +10,19 @@ img {
     width: 400px;
 }
 
+.Cover__title {
+    font-size: 20px;
+    color: #666;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,.17);
+}
+
 .List {
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    
 }
+
 .List__header {
     width: 100%;
 }
