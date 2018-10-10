@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './Form.css';
 
 import { setDate, addList, setText, setWeather } from '../actions';
@@ -30,8 +29,7 @@ const Form = ({ date, color, text }) => {
     return(
         
            <form onSubmit={handleSubmit}>
-           
-            
+                        
             <input type="date" ref={input => _date = input} onChange={handleDate} value={date}/>
             <select ref={input => _weather = input} onChange={handleWeather}>
                 <option value="sun">Sunny</option>
@@ -40,11 +38,9 @@ const Form = ({ date, color, text }) => {
             </select>
             <textarea ref={input => _text = input} value={text} onChange={handleText} style={{marginTop: "10px"}} required>
             </textarea>
-           
             <button type="submit" className="btn btn-secondary">Add Diary</button>
 
           </form>
-       
         
     );
 }

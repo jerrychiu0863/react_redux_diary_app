@@ -33,17 +33,21 @@ const List = () => {
     return(
         <div className="Container">
             {list.length === 0 ? 
-                <div><img src="https://d29fhpw069ctt2.cloudfront.net/photo/7504/preview/a5481a8e-69c7-4a9a-8bf8-88fed750bfd9_1280x1280.jpg" alt="123" /><p className="Cover__title">Start Your Journey From Here!</p></div> : 
+                <div>
+                    <img src="https://d29fhpw069ctt2.cloudfront.net/photo/7504/preview/a5481a8e-69c7-4a9a-8bf8-88fed750bfd9_1280x1280.jpg" alt="123" />
+                    <p className="Cover__title">Start Your Journey From Here!</p>
+                </div> : 
             list.map(l => 
              <div key={l.id} className="List">
                  <div className="List__header">
-                      <h1 style={{ fontSize: '20px'}} className="List__title" onClick={sortList}>{l.date} <i className={getWeather(l.weather)}></i></h1>
+                      <h1 style={{ fontSize: '20px'}} className="List__title" onClick={sortList}>{l.date} 
+                          <i className={getWeather(l.weather)}></i>
+                      </h1>
                  </div>
                  <div className="List__content">
                      <p>{l.text}</p>
-                      <button onClick={() => onDismiss(l.id)} className="btn btn-outline-dark List__deleteBtn">Delete</button>
+                     <button onClick={() => onDismiss(l.id)} className="btn btn-outline-dark List__deleteBtn">Delete</button>
                  </div>
-               
              </div>)}
          </div>
     );

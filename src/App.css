@@ -35,8 +35,9 @@ body {
 }
 
 .model-content {
+    position: relative;
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 50px auto;
     width: 400px;
     padding: 20px;
     border: 1px solid #888;
@@ -44,9 +45,9 @@ body {
 }
 
 .model__deleteBtn {
-    position: fixed;
-    right: 20px;
-    top: 20px;
+    position: absolute;
+    right: 0;
+    top: -8%;
     background-color: transparent;
     border: none;
 }

@@ -13,7 +13,7 @@ export default function list(state=[], action) {
             return updatedList
             
         case C.SORT_BY_DATE:
-            const sortedList = _.orderBy(state, [action.payload])
+            const sortedList = _.orderBy(state, [action.payload]).reverse();
             return sortedList;
                
         default:

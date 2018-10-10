@@ -8,14 +8,10 @@ import { setModel } from './actions';
 
 import './App.css';
 
-
-
-
 const App = () => {
     
    const state = store.getState();
    const {color, date, isOpenModel, text} = state;
-   console.log(localStorage);
    
    const closeModel = () => {
       store.dispatch(setModel(false));
@@ -26,21 +22,17 @@ const App = () => {
            
            <Header />
            <List />
-           
-            <div className={isOpenModel ? "model active" : "model"}>
+           <div className={isOpenModel ? "model active" : "model"}>
                 <div className="model-content">
                     <Form date={date} color={color} text={text}/>
+                    <button onClick={closeModel} className="model__deleteBtn">
+                        <i className="fas fa-times-circle"></i>
+                    </button> 
                 </div>
-                
-                <button onClick={closeModel} className="model__deleteBtn">
-                <i className="fas fa-times-circle"></i></button> 
-            </div>
+           </div>
 
       </div>
     );
 }
-
-    
-  
 
 export default App;
